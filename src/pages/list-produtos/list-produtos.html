@@ -1,0 +1,32 @@
+<!--
+  Generated template for the ListProdutosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle primary>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Produtos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+  <div *ngFor="let item of listaProdutos">
+    <button ion-item >
+      {{item.nmProduto}}
+    </button>
+    <button (click)="onExcluirProduto(item.idProduto)" ion-button full color="danger">
+      <ion-icon name="trash"></ion-icon>
+    </button>
+    </div>
+  </ion-list>
+
+  <ion-footer>
+    <button ion-button block (click)="openProducts()">Incluir novo</button>
+  </ion-footer>
+</ion-content>

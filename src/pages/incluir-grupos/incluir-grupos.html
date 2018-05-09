@@ -1,0 +1,26 @@
+<!--
+  Generated template for the IncluirGruposPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar> 
+    <ion-title>Grupos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-item>
+  <ion-label floating>Nome do Grupo</ion-label>
+  <ion-input type="text" [(ngModel)]="grupo.nmGrupo" name="grupo"></ion-input>
+</ion-item>
+</ion-content>
+<ion-footer>
+    <ion-buttons start>
+      <button (click)="onSalvarGrupo()" ion-button full color="primary">Incluir Grupo</button>
+    </ion-buttons>
+</ion-footer>

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle primary>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Grupos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <div *ngFor="let g of grupos">
+    <button ion-item >
+      {{g.nmGrupo}}
+    </button>
+    <button (click)="onExcluirGrupo(g.id_grupo)" ion-button full color="danger">
+      <ion-icon name="trash"></ion-icon>
+    </button>
+   
+    </div>
+  </ion-list>
+</ion-content>
+<ion-footer>
+<button (click)="onInsertGrupo()" ion-button full color="primary" >Incluir Grupo</button>
+</ion-footer>
